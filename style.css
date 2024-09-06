@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+    /* warna */
+    --primary-color: #1E90FF  ; /*tombol utama, link, dan elemen-elemen penting*/
+    --secondary-color: #FF6347 ; /* hover states atau subtitle*/
+    --tertiary-color: #273316;
+    --background-color: #F3D0B3   ; /* Latar belakang umum */
+    --accent-color: #FFD700  ; /* untuk sorotan, tautan, atau tombol yang memerlukan perhatian.*/
+    --hover-color: #32CD32  ; /* HOVER efek dinamis pada elemen interaktif seperti tombol atau tautan saat diarahkan */
+    --text-color: #2C3E50  ; /* Warna teks utama */
+
+    /* FONT */
+    --font-family-heading: "Poppins", sans-serif;
+    --font-family-subheading: "Oswald", sans-serif;
+    --font-family-body: "Nunito", sans-serif;
+    --font-family-button: "Caveat", cursive;
+    --font-family-link: "Source Code Pro", monospace;;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background-color: #ffedde;
+    backdrop-filter: blur(10px);
+}
+.logo{
+    color: var(--secondary-color);
+    font-family: var(--font-family-heading);
+    font-size: 2vw;
+    font-weight: 700;
+}
+span{
+    color: var(--accent-color);
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    justify-content: space-around;
+    padding: 2rem 3rem;
+}
+nav ul li a{
+    font-family: var(--font-family-link);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+nav ul li a:hover{
+    color: var(--secondary-color);
+    transition: color 0.3s ease, color 0.3s ease;
+}
+button{
+    border: none;
+    background-color: var(--accent-color);
+    font-family: var(--font-family-body);
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 0.1cap;
+    padding: 12px 20px;
+    border-radius: 50px;
+}
+button:hover {
+    background-color: var(--secondary-color); 
+    color: #FFFFFF; 
+    font-family: var(--font-family-heading);
+    transition: all 0.3s ease-in-out; 
+    transform: scale(1.1); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
