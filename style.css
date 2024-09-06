@@ -43,14 +43,14 @@ nav ul li{
     list-style-type: none;
     display: inline-block;
     justify-content: space-around;
-    padding: 2rem 3rem;
+    padding: 2rem;
 }
 nav ul li a{
     font-family: var(--font-family-link);
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.4vw;
 }
 nav ul li a:hover{
     color: var(--secondary-color);
@@ -61,16 +61,87 @@ button{
     background-color: var(--accent-color);
     font-family: var(--font-family-body);
     font-weight: 900;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.1cap;
-    padding: 12px 20px;
-    border-radius: 50px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: scale 0.2 ease; 
 }
 button:hover {
     background-color: var(--secondary-color); 
     color: #FFFFFF; 
     font-family: var(--font-family-heading);
-    transition: all 0.3s ease-in-out; 
-    transform: scale(1.1); 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.toggle_btn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* dropdown Menu */
+.dropdown_menu{
+    width: 100vw;
+    height: 0;
+    background: rgba(245, 209, 209, 0.226);
+    backdrop-filter: blur(25px);
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 100vh;
+}
+.dropdown_menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* MEDIA RESPONSIF */
+
+@media (max-width: 992px){
+    .logo{
+        padding: 1rem;
+    }
+    nav .nav-list{
+        padding: 0;
+        margin: 0;
+    }
+    nav .button{
+        font-size: 1.3vw;
+    }
+}
+@media (min-width: 769px) {
+    .dropdown_menu {
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .logo{
+        padding: 1rem;
+    }
+    nav .nav-list,
+    nav .button{
+        display: none;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    .dropdown_menu li{
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    .dropdown_menu li a{
+        font-family: var(--font-family-link);
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+    button{
+        font-size: 1rem;
+    }
+    nav .toggle_btn{
+        display: block;
+    }
 }
