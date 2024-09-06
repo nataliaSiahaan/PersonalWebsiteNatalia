@@ -489,6 +489,106 @@ main span{
     background-color: var(--hover-color);
 }
 
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: var(--font-family-heading);
+    color: var(--primary-color);
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.contact-form form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.contact-form label {
+    font-size: 1em;
+    font-family: var(--font-family-body);
+    color: var(--text-color);
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form .submit-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-family: var(--font-family-heading);
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
 
 
 /* MEDIA RESPONSIF */
@@ -627,6 +727,13 @@ main span{
     }
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+    .contact-section .container {
+        padding: 0 10px;
+    }
+
+    .contact-info ul li {
+        font-size: 1em;
     }
 }
 @media (max-width: 425px) {
