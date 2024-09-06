@@ -111,7 +111,7 @@ main{
     color: #f0f0f0;
 }
 .home-content h1{
-    font-size: 5rem;
+    font-size: 5vw;
     font-family: var(--font-family-heading);
     font-weight: 700;
     line-height: 1.5;
@@ -120,19 +120,21 @@ main span{
     color: var(--background-color);
 }
 .home-content h3{
-    font-size: 2rem;
+    font-size: 3vw;
     font-family: var(--font-family-body);
     font-weight: 900;
     line-height: 1.5;
     margin-bottom: 1rem;
 }
-.home-img{
-    border-radius: 50%;
+.home-content p{
+    font-size: 1vw;
+    letter-spacing: 0.1cap;
+    font-family: var(--font-family-heading);
 }
 .home-img img{
     position: relative;
     width: 24vw;
-    border-radius: 50%;
+    border-radius: 10%;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -149,11 +151,11 @@ main span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 4vw;
+    height: 4vw;
     background-color: transparent;
     border: 2px solid var(--hover-color);
-    font-size: 1.5rem;
+    font-size: 2.5vw;
     color: #f3f1f1;
     border-radius: 50%;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -165,11 +167,11 @@ main span{
 }
 .btn{
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 0.5rem 1rem;
     border-radius:2rem;
     background-color: var(--primary-color);
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     letter-spacing: 0.2cap;
     font-family: var(--font-family-body);
     font-weight: 800;
@@ -227,7 +229,13 @@ main span{
 
 
 /* MEDIA RESPONSIF */
+@media (max-width: 1000px){
+    .home-content{
+        gap:4rem;
+    }
+}
 @media (max-width: 992px){
+    /* navbar */
     .logo{
         padding: 1rem;
     }
@@ -238,6 +246,26 @@ main span{
     nav .button{
         font-size: 1.3vw;
     }
+    /* HOME hero */
+}
+@media (max-width: 885px){
+    main {
+        flex-direction: column-reverse;
+        padding: 3vw;
+        gap: 1rem;
+    }
+    .home-content{
+        padding: 0 10rem;
+        text-align: center;
+    }
+    .home-img img{
+        border-radius: 50%;
+        width: 22vw;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+
 }
 @media (min-width: 769px) {
     .dropdown_menu {
@@ -270,5 +298,65 @@ main span{
     }
     nav .toggle_btn{
         display: block;
+    }
+}
+@media (max-width: 425px) {
+    main {
+        flex-direction: column-reverse;
+        padding: 3vw;
+        gap: 1rem;
+        overflow: hidden;
+    }
+
+    .home-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .home-content p {
+        font-weight: 200;
+        letter-spacing: 0.1px; /* Perbaiki typo dari 0.1cap ke 0.1px */
+        font-family: var(--font-family-body);
+        margin: 0 2rem; /* Menambahkan margin agar teks tidak terlalu mepet ke tepi */
+    }
+
+    .home-img img {
+        border-radius: 50%;
+        width: 60vw; /* Memperbesar gambar sedikit agar lebih proporsional */
+        max-width: 300px; /* Menambahkan batasan lebar maksimum untuk gambar */
+        margin: 0 auto; /* Memastikan gambar terpusat */
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .social-icons a {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .typing-text {
+        font-size: 1.2rem;
+        min-width: auto;
     }
 }
