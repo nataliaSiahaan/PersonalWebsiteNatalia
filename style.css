@@ -23,6 +23,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+body{
+    background-color: var(--primary-color);
+}
 nav{
     display: flex;
     align-items: center;
@@ -384,6 +387,108 @@ main span{
     font-size: 1vw;
 }
 
+/* Portfolio */
+.intro {
+    padding: 5vw 1vw;
+    text-align: center;
+}
+.intro blockquote {
+    font-family: var(--font-family-write);
+    font-weight: 900;
+    font-size: 2.5vw;
+    font-style: italic;
+    color: #f0f0f0;
+    margin: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+.portfolio {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #252C37; 
+}
+.portfolio h2 {
+    font-family: var(--font-family-heading);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--accent-color);
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 2rem;
+}
+.card-content h3 {
+    font-family: var(--font-family-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.card-content h4 {
+    font-family: var(--font-family-subheading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3vw;
+}
+.card-content h4 span{
+    font-family: var(--font-family-subheading);
+    color: var(--hover-color);
+    margin-bottom: 1rem;
+    font-size: 1vw;
+}
+.card-content p {
+    color: var(--text-color);
+}
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+.cta {
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+.cta h2 {
+    font-family: var(--font-family-write);
+    color: var(--accent-color);
+    font-size: 5vw;
+    margin-bottom: 1rem;
+}
+.cta p {
+    font-family: var(--font-family-body);
+    font-size: 2vw;
+    margin-bottom: 1rem;
+}
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 2vh;
+}
+.cta-button:hover {
+    background-color: var(--hover-color);
+}
+
 
 
 /* MEDIA RESPONSIF */
@@ -512,6 +617,16 @@ main span{
     .skillSection {
         grid-template-columns: 1fr;
         padding: 0 5vw 5rem 20vw;
+    }
+    /* Portfolio */
+    .intro {
+        padding: 1.5rem 1rem;
+    }
+    .intro blockquote {
+        font-size: 1.2rem;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
 @media (max-width: 425px) {
